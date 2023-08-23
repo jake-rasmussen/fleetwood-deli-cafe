@@ -1,4 +1,4 @@
-import { FoodType, MenuSectionType } from "~/menu";
+import { type FoodType, type MenuSectionType } from "~/menu";
 import FoodCard from "./foodCard";
 
 const MenuSection = (props: MenuSectionType) => {
@@ -25,7 +25,7 @@ const MenuSection = (props: MenuSectionType) => {
           })}
         </div>
         <div className="absolute right-0">
-          {universalOptions && universalOptions.map((food: FoodType, index: number) => {
+          {universalOptions?.map((food: FoodType, index: number) => {
             return (
               <div className="flex flex-row" key={`universalOption${index}`}>
                 <FoodCard

@@ -1,4 +1,4 @@
-import { FoodType } from "~/menu"
+import { type FoodType } from "~/menu"
 
 const FoodCard = (props: FoodType) => {
   const {
@@ -14,16 +14,16 @@ const FoodCard = (props: FoodType) => {
       <div className="flex flex-row items-center">
         <h5 className="font-medium text-lg whitespace-nowrap sm:text-lg text-sm font-semibold">{food}</h5>
         <span className="mx-2 font-black underline font-sans text-deepred">{price && "$"}{price}</span>
-        {optionsInline && optionsInline.map((option) => {
-          return (<>
+        {optionsInline?.map((option, index: number) => {
+          return (<div key={`optionInline${index}`}>
             {option.option}
             <span className="mx-2 font-black font-sans text-xs text-deepred underline">{option.price && "$"}{option.price}</span>
-          </>);
+          </div>);
         })}
       </div>
       <div>
-        {options && options.map((option) => {
-          return (<div className="ml-4">
+        {options?.map((option, index: number) => {
+          return (<div className="ml-4" key={`option${index}`}>
             <span>{option.option}</span>
             <span className="mx-2 font-black font-sans text-xs text-deepred underline">{option.price && "$"}{option.price}</span>
           </div>);

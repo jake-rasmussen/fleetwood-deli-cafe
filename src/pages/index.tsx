@@ -1,13 +1,11 @@
 import Head from "next/head";
-import Link from "next/link";
 import Menu from "~/components/menu";
-import MenuSection from "~/components/menuSection";
 import Tab from "~/components/tab/tab";
 import TabContent from "~/components/tab/tabContent";
 import TabHeader from "~/components/tab/tabHeader";
 import TabList from "~/components/tab/tabList";
 
-import { MenuSectionType, menu } from "~/menu";
+import { menu } from "~/menu";
 
 export default function Home() {
   return (
@@ -40,12 +38,12 @@ export default function Home() {
                 Welcome to The Fleetwood Deli and Cafe – a cherished cornerstone of Mount Vernon since 1991.
                 For over three decades, we have been serving up a symphony of flavors that resonate with the soul,
                 becoming a culinary sanctuary for both locals and visitors alike. At The Fleetwood Deli and Cafe,
-                we take pride in showcasing Mom's Famous Homestyle Cooking, Baking, and BBQ. Our journey began with
+                we take pride in showcasing Mom&apos;s Famous Homestyle Cooking, Baking, and BBQ. Our journey began with
                 a vision to offer more than just meals – we wanted to craft experiences that evoke nostalgia and
                 warmth, just like a home-cooked meal. Every dish on our menu is a testament to that vision, prepared
-                with a touch of care and an abundance of love. So, whether you're seeking a quick bite to satisfy your
+                with a touch of care and an abundance of love. So, whether you&apos;re seeking a quick bite to satisfy your
                 cravings or planning an event that demands amazing food, The Fleetwood Deli and Cafe welcomes you with
-                open arms with a menu that's designed to delight. Join us in celebrating the art of food, community, and
+                open arms with a menu that&apos;s designed to delight. Join us in celebrating the art of food, community, and
                 the joy of sharing a meal that warms the heart and feeds the soul.
               </div>
             </TabContent>

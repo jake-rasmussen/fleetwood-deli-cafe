@@ -1,4 +1,4 @@
-import { MenuSectionType } from "~/menu";
+import { type MenuSectionType } from "~/menu";
 import MenuSection from "./menuSection";
 import { useEffect, useState } from "react";
 
