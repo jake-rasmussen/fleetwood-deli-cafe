@@ -6,10 +6,10 @@ const MenuSection = (props: MenuSectionType) => {
 
   return (
     <section className="relative max-w-xl">
-      <header className={`border-y-4 py-4  border-black ${universalOptions ? "px-10" : "px-20"}`}>
+      <header className={`border-y-4 py-4  border-blue ${universalOptions ? "px-10" : "px-20"}`}>
         <h3 className="text-4xl font-semibold uppercase text-center">{name}</h3>
       </header>
-      <div className={`${universalOptions && "flex flex-row items-center"} my-10`}>
+      <div className={`${universalOptions && "flex flex-row items-center"} my-10 mx-auto w-fit`}>
         <div className="flex flex-col mx-4">
           {foods.map((food: FoodType, index: number) => {
             return (

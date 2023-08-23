@@ -8,7 +8,8 @@ export default {
         black: "#272829",
         tan: "#FFF6E0",
         bluegray: "#61677A",
-        deepred: "#D1512D"
+        deepred: "#D1512D",
+        blue: "#6DA4D0",
       }
     },
   },

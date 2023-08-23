@@ -281,7 +281,6 @@ export const menu: MenuSectionType[] = [
       },
     ]
   },
-
   {
     name: "Paninis",
     foods: [
@@ -291,96 +290,6 @@ export const menu: MenuSectionType[] = [
         description: "Fresh Mozzarella, Roasted Peppers and Pesto with choice of: Grilled Chicken, Chicken Cutlet, Eggplant or Italian Combo"
       }
     ],
-  },
-  {
-    name: "Specialty Combo",
-    foods: [
-      {
-        food: "The City Hall",
-        optionsInline: [
-          {
-            option: "Roll",
-            price: 10.49
-          },
-          {
-            option: "Wedge",
-            price: 11.99
-          },
-        ],
-        description: "Pastrami, Swiss, Russian, Coleslaw"
-      },
-      {
-        food: "The Gramatan",
-        optionsInline: [
-          {
-            option: "Roll",
-            price: 10.49
-          },
-          {
-            option: "Wedge",
-            price: 11.99
-          },
-        ],
-        description: "Chicken Cutlet, Lettuce, Tomato, Red Onion, Russian"
-      },
-      {
-        food: "The Empire",
-        optionsInline: [
-          {
-            option: "Roll",
-            price: 10.49
-          },
-          {
-            option: "Wedge",
-            price: 11.99
-          },
-        ],
-        description: "Grilled Chicken, Mixed Greens, Hot Peppers, Fresh Mozzarella, Balsamic Vinaigrette"
-      },
-      {
-        food: "The Lite Weight Wrap",
-        price: 10.99,
-        description: "Turkey, Swiss, Lettuce, Tomato, Honey Mustard"
-      },
-      {
-        food: "Grilled Veggie / Hummus wrap",
-        price: 8.95,
-      },
-      {
-        food: "El Gringo Wrap",
-        price: 9.99,
-        description: "Chipotle Chicken Salad and Bacon"
-      },
-      {
-        food: "The Big Bite",
-        price: 11.95,
-        description: "Corned Beef, Turkey Swiss and Russian Slaw on a Wedge"
-      },
-      {
-        food: "Grilled \"Puebla\" Chicken",
-        price: 11.99,
-        description: "Includes Fried Egg and Cheddar on Wedge"
-      },
-      {
-        food: "Italian or American Wedge",
-        price: 11.99
-      },
-      {
-        food: "Papo V\'s Philly Cheese Steak",
-        price: 12.99,
-        description: "Sliced Steak Smothered in Onions and Melted Cheese on Wedge"
-      },
-      {
-        food: "Benny\'s Special",
-        price: 11.95,
-        description: "Chicken Cutlet, Bacon, Pepper Jack Cheese, Lettuce, Tomato and Chipotle Mayo on Wedge"
-      },
-      {
-        food: "Eggplant Wrap",
-        price: 9.99,
-        description: "Eggplant, Fresh Mozzarella, Roasted Peppers and Balsamic Vinaigrette"
-      }
-    ]
   },
   {
     name: "Fresh Brewed",
@@ -530,6 +439,97 @@ export const menu: MenuSectionType[] = [
         food: "Wedge",
         price: 1.50
       },
+    ]
+  },
+
+  {
+    name: "Specialty Combo",
+    foods: [
+      {
+        food: "The City Hall",
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 10.49
+          },
+          {
+            option: "Wedge",
+            price: 11.99
+          },
+        ],
+        description: "Pastrami, Swiss, Russian, Coleslaw"
+      },
+      {
+        food: "The Gramatan",
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 10.49
+          },
+          {
+            option: "Wedge",
+            price: 11.99
+          },
+        ],
+        description: "Chicken Cutlet, Lettuce, Tomato, Red Onion, Russian"
+      },
+      {
+        food: "The Empire",
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 10.49
+          },
+          {
+            option: "Wedge",
+            price: 11.99
+          },
+        ],
+        description: "Grilled Chicken, Mixed Greens, Hot Peppers, Fresh Mozzarella, Balsamic Vinaigrette"
+      },
+      {
+        food: "The Lite Weight Wrap",
+        price: 10.99,
+        description: "Turkey, Swiss, Lettuce, Tomato, Honey Mustard"
+      },
+      {
+        food: "Grilled Veggie / Hummus wrap",
+        price: 8.95,
+      },
+      {
+        food: "El Gringo Wrap",
+        price: 9.99,
+        description: "Chipotle Chicken Salad and Bacon"
+      },
+      {
+        food: "The Big Bite",
+        price: 11.95,
+        description: "Corned Beef, Turkey Swiss and Russian Slaw on a Wedge"
+      },
+      {
+        food: "Grilled \"Puebla\" Chicken",
+        price: 11.99,
+        description: "Includes Fried Egg and Cheddar on Wedge"
+      },
+      {
+        food: "Italian or American Wedge",
+        price: 11.99
+      },
+      {
+        food: "Papo V\'s Philly Cheese Steak",
+        price: 12.99,
+        description: "Sliced Steak Smothered in Onions and Melted Cheese on Wedge"
+      },
+      {
+        food: "Benny\'s Special",
+        price: 11.95,
+        description: "Chicken Cutlet, Bacon, Pepper Jack Cheese, Lettuce, Tomato and Chipotle Mayo on Wedge"
+      },
+      {
+        food: "Eggplant Wrap",
+        price: 9.99,
+        description: "Eggplant, Fresh Mozzarella, Roasted Peppers and Balsamic Vinaigrette"
+      }
     ]
   },
   {
