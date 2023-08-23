@@ -13,7 +13,7 @@ const FoodCard = (props: FoodType) => {
     <section className="font-serif">
       <div className="flex flex-row items-center">
         <h5 className="font-medium text-lg whitespace-nowrap sm:text-lg text-sm font-semibold">{food}</h5>
-        <span className="mx-2 font-black underline font-sans text-deepred">{price && "$"}{price}</span>
+        <span className="mx-0 lg:mx-2 font-black underline font-sans text-deepred">{price && "$"}{price}</span>
         {optionsInline?.map((option, index: number) => {
           return (<div key={`optionInline${index}`}>
             {option.option}
