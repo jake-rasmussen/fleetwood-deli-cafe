@@ -85,7 +85,7 @@ export const menu: MenuSectionType[] = [
         price: 9.95,
         options: [
           {
-            option: "Add Bacon, Saussage or Ham",
+            option: "Add Bacon, Sausage or Ham",
             price: 1.75
           }
         ],
@@ -96,7 +96,7 @@ export const menu: MenuSectionType[] = [
         price: 7.99,
         options: [
           {
-            option: "Add Bacon, Saussage or Ham",
+            option: "Add Bacon, Sausage or Ham",
             price: 1.75
           }
         ],
@@ -155,7 +155,12 @@ export const menu: MenuSectionType[] = [
       {
         food: "Chicken and Cheese Quesadillas",
         price: 9.99,
-        description: "Additional Sides 1.50 Each"
+        options: [
+          {
+            option: "Additional Sides",
+            price: 1.5
+          }
+        ]
       },
       {
         food: "Fries or Knish",

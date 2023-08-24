@@ -4,6 +4,11 @@ import FoodCard from "./foodCard";
 const MenuSection = (props: MenuSectionType) => {
   const { name, foods, universalOptions } = props;
 
+  let USDollar = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD"
+  });
+
   return (
     <section className="relative max-w-xl">
       <header className={`border-y-4 py-4  border-blue ${universalOptions ? "px-10" : "px-20"}`}>
@@ -24,14 +29,12 @@ const MenuSection = (props: MenuSectionType) => {
             )
           })}
         </div>
-        <div className="absolute right-0 -translate-y-4 -translate-x-4">
+        <div className="absolute right-0 -translate-y-4 -translate-x-10">
           {universalOptions?.map((food: FoodType, index: number) => {
             return (
-              <div className="flex flex-row" key={`universalOption${index}`}>
-                <FoodCard
-                  food={food.food}
-                  price={food.price}
-                />
+              <div className="flex flex-row items-center" key={`universalOption${index}`}>
+                <h5 className="font-serif font-medium text-xs sm:text-sm whitespace-nowrap font-semibold">{food.food}</h5>
+                <span className="mx-2 font-black underline font-sans text-deepred text-xs sm:text-md">{food.price && USDollar.format(food.price)}</span>
               </div>
             )
           })}
