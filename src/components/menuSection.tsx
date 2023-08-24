@@ -4,7 +4,7 @@ import FoodCard from "./foodCard";
 const MenuSection = (props: MenuSectionType) => {
   const { name, foods, universalOptions } = props;
 
-  let USDollar = new Intl.NumberFormat("en-US", {
+  const USDollar = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD"
   });

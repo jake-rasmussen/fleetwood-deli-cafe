@@ -9,7 +9,7 @@ const FoodCard = (props: FoodType) => {
     description
   } = props;
 
-  let USDollar = new Intl.NumberFormat("en-US", {
+  const USDollar = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD"
   });
