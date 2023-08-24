@@ -1,6 +1,7 @@
 import { type MenuSectionType } from "~/menu";
 import MenuSection from "./menuSection";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Menu = ({ menu }: {
   menu: MenuSectionType[]
@@ -21,11 +22,17 @@ const Menu = ({ menu }: {
         {
           leftMenu.map((item: MenuSectionType, index: number) => {
             return (
-              <MenuSection
-                name={item.name}
-                foods={item.foods}
-                key={`menuLeft${index}`}
-              />
+              <motion.div
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 100 }}
+              >
+                <MenuSection
+                  name={item.name}
+                  foods={item.foods}
+                  key={`menuLeft${index}`}
+                />
+              </motion.div>
+
             )
           })
         }
@@ -34,12 +41,17 @@ const Menu = ({ menu }: {
         {
           rightMenu.map((item: MenuSectionType, index: number) => {
             return (
-              <MenuSection
-                name={item.name}
-                foods={item.foods}
-                universalOptions={item.universalOptions}
-                key={`menuRight${index}`}
-              />
+              <motion.div
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 100 }}
+              >
+                <MenuSection
+                  name={item.name}
+                  foods={item.foods}
+                  universalOptions={item.universalOptions}
+                  key={`menuRight${index}`}
+                />
+              </motion.div>
             )
           })
         }

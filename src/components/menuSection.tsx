@@ -1,5 +1,6 @@
 import { type FoodType, type MenuSectionType } from "~/menu";
 import FoodCard from "./foodCard";
+import { motion } from "framer-motion";
 
 const MenuSection = (props: MenuSectionType) => {
   const { name, foods, universalOptions } = props;
@@ -10,7 +11,7 @@ const MenuSection = (props: MenuSectionType) => {
   });
 
   return (
-    <section className="relative max-w-xl">
+    <section className="relative">
       <header className={`border-y-4 py-4  border-blue ${universalOptions ? "px-10" : "px-20"}`}>
         <h3 className="text-4xl font-semibold uppercase text-center">{name}</h3>
       </header>
@@ -18,14 +19,20 @@ const MenuSection = (props: MenuSectionType) => {
         <div className="flex flex-col mx-4">
           {foods.map((food: FoodType, index: number) => {
             return (
-              <FoodCard
-                food={food.food}
-                price={food.price}
-                options={food.options}
-                optionsInline={food.optionsInline}
-                description={food.description}
-                key={`food${index}`}
-              />
+              <motion.div
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 100 }}
+                transition={{ delay: index / 50 }}
+              >
+                <FoodCard
+                  food={food.food}
+                  price={food.price}
+                  options={food.options}
+                  optionsInline={food.optionsInline}
+                  description={food.description}
+                  key={`food${index}`}
+                />
+              </motion.div>
             )
           })}
         </div>
