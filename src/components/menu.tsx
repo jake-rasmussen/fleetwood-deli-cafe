@@ -25,11 +25,11 @@ const Menu = ({ menu }: {
               <motion.div
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 100 }}
+                key={`menuLeft${index}`}
               >
                 <MenuSection
                   name={item.name}
                   foods={item.foods}
-                  key={`menuLeft${index}`}
                 />
               </motion.div>
 
@@ -44,12 +44,12 @@ const Menu = ({ menu }: {
               <motion.div
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 100 }}
+                key={`menuRight${index}`}
               >
                 <MenuSection
                   name={item.name}
                   foods={item.foods}
                   universalOptions={item.universalOptions}
-                  key={`menuRight${index}`}
                 />
               </motion.div>
             )

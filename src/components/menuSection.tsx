@@ -23,6 +23,7 @@ const MenuSection = (props: MenuSectionType) => {
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 100 }}
                 transition={{ delay: index / 50 }}
+                key={`food${index}`}
               >
                 <FoodCard
                   food={food.food}
@@ -30,7 +31,6 @@ const MenuSection = (props: MenuSectionType) => {
                   options={food.options}
                   optionsInline={food.optionsInline}
                   description={food.description}
-                  key={`food${index}`}
                 />
               </motion.div>
             )

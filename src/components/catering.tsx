@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CateringInfoType } from "~/catering";
+import { type CateringInfoType } from "~/catering";
 import CateringCard from "./cateringCard";
 import { motion } from "framer-motion";
 
@@ -26,11 +26,11 @@ const Catering = ({ catering }: {
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 100 }}
                 transition={{ delay: index / 50 }}
+                key={`cateringLeft${index}`}
               >
                 <CateringCard
                   name={item.name}
                   description={item.description}
-                  key={`cateringLeft${index}`}
                 />
               </motion.div>
             )
@@ -45,11 +45,11 @@ const Catering = ({ catering }: {
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 100 }}
                 transition={{ delay: index / 50 }}
+                key={`cateringRight${index}`}
               >
                 <CateringCard
                   name={item.name}
                   description={item.description}
-                  key={`cateringRight${index}`}
                 />
               </motion.div>
             )
