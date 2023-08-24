@@ -62,7 +62,7 @@ const Catering = ({ catering }: {
       animate={{ opacity: 100 }}
       className="relative flex items-center  my-4 w-full text-center justify-center"
     >
-      <span className="bg-tan px-8 z-10 font-bold uppercase text-xl">Mexican, Chinese, and Caribbean menus <br />also available upon request</span>
+      <span className="bg-tan px-8 z-10 font-bold uppercase text-md md:text-xl">Mexican, Chinese, and Caribbean menus <br />also available upon request</span>
       <div className="absolute w-full h-1 bg-deepred z-0" />
     </motion.div>
   </div>)
