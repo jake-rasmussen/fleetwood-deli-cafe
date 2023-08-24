@@ -20,10 +20,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen bg-tan overflow-x-scroll">
-        <header className="py-20 text-center">
+        <header className="pb-14 pt-20 text-center">
           <div className="flex flex-col justify-center items-center">
-            <h2 className="italic py-1 px-6 border border-1 rounded-full border-black tracking-widest font-serif bg-white text-xl md:text-2xl">The Fleetwood</h2>
-            <h1 className="font-black uppercase text-5xl md:text-7xl text-black">Deli & Cafe</h1>
+            <h2 className="italic py-1 px-6 border border-1 rounded-full border-black tracking-widest font-serif bg-white text-2xl md:text-3xl">The Fleetwood</h2>
+            <h1 className="font-black uppercase text-6xl md:text-8xl text-black">Deli & Cafe</h1>
           </div>
         </header>
 
