@@ -24,7 +24,7 @@ const Menu = ({ menu }: {
               <MenuSection
                 name={item.name}
                 foods={item.foods}
-                key={`menu${index}`}
+                key={`menuLeft${index}`}
               />
             )
           })
@@ -38,26 +38,30 @@ const Menu = ({ menu }: {
                 name={item.name}
                 foods={item.foods}
                 universalOptions={item.universalOptions}
-                key={`menu${index}`}
+                key={`menuRight${index}`}
               />
             )
           })
         }
-        <section className="relative max-w-xl">
-          <header className="border-y-4 py-4  border-blue px-20">
-            <h3 className="text-4xl font-semibold uppercase text-center">Steam Table</h3>
-          </header>
-          <div className="flex flex-row my-10 items-center">
-            <div className="mx-4 text-center font-serif">
-              Featuring Daily Selections from our Italian, Caribbean, Mexican, Chinese, BBQ and Classic American Menus
-            </div>
-            <div className="mx-4 text-center font-serif sm:min-w-fit font-bold">
-              Open <span className="whitespace-nowrap">Monday - Saturday</span>
-              <br />
-              10AM - 3PM
-            </div>
-          </div>
-        </section>
+        {
+          (rightMenu.length !== 0 && leftMenu.length !== 0) ?
+            <section className="relative max-w-xl">
+              <header className="border-y-4 py-4  border-blue px-20">
+                <h3 className="text-4xl font-semibold uppercase text-center">Steam Table</h3>
+              </header>
+              <div className="flex flex-row my-10 items-center">
+                <div className="mx-4 text-center font-serif">
+                  Featuring Daily Selections from our Italian, Caribbean, Mexican, Chinese, BBQ and Classic American Menus
+                </div>
+                <div className="mx-4 text-center font-serif sm:min-w-fit font-bold">
+                  Open <span className="whitespace-nowrap">Monday - Saturday</span>
+                  <br />
+                  10AM - 3PM
+                </div>
+              </div>
+            </section> : <></>
+        }
+
       </div>
     </section>
   );

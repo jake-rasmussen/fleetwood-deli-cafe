@@ -1,5 +1,6 @@
 import Head from "next/head";
 import About from "~/components/about";
+import Catering from "~/components/catering";
 import Contact from "~/components/contact";
 import Menu from "~/components/menu";
 import Tab from "~/components/tab/tab";
@@ -8,6 +9,7 @@ import TabHeader from "~/components/tab/tabHeader";
 import TabList from "~/components/tab/tabList";
 
 import { menu } from "~/menu";
+import { catering } from "~/catering";
 
 export default function Home() {
   return (
@@ -28,12 +30,16 @@ export default function Home() {
         <section className="relative flex flex-col justify-center">
           <Tab>
             <TabList>
-              <TabHeader>Menu</TabHeader>
+              <TabHeader>Our Menu</TabHeader>
+              <TabHeader>Catering</TabHeader>
               <TabHeader>About Us</TabHeader>
               <TabHeader>Contact</TabHeader>
             </TabList>
             <TabContent>
               <Menu menu={menu} />
+            </TabContent>
+            <TabContent>
+              <Catering catering={catering}/>
             </TabContent>
             <TabContent>
               <About />
