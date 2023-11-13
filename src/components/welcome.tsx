@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import AnimatedTextCharacter from "./animatedText";
-import Carousel from "./Carousel";
+import Carousel from "./carousel";
 
 const Welcome = () => {
   return (<section className="flex flex-col items-center justify-center">
