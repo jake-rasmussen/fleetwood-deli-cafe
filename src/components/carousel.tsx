@@ -4,6 +4,7 @@ import React from 'react'
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import { twMerge } from "tailwind-merge";
 
 const Carousel = () => {
   const slides = [];
@@ -40,7 +41,7 @@ const Carousel = () => {
         
       }}
       extensions={{ AutoScroll }}
-      className="w-full border-y-8 border-double border-black my-0"
+      className={twMerge("w-full border-y-8 border-double border-black my-0", slides.length === 0 ? "invisible" : "")}
     >
       {slides.map((slide) => slide)}
     </Splide >
