@@ -10,7 +10,7 @@ const Welcome = () => {
     <motion.div
       initial={{ x: -40, opacity: 0 }}
       animate={{ x: 0, opacity: 100 }}
-      transition={{ delay: 1 }}
+      transition={{ delay: 1.1 }}
       className="flex flex-col items-center justify-center"
     >
       <div className="font-serif text-xl max-w-2xl text-center text-sm mx-4">

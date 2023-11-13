@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 const AnimatedTextCharacter = ({ text, className }: { text: string, className?: string }) => {
 // splitting text into letters
@@ -44,6 +44,7 @@ const AnimatedTextCharacter = ({ text, className }: { text: string, className?: 
       variants={container}
       initial="hidden"
       animate="visible"
+      transition={{ delay: 0.2 }}
     >
       {letters.map((letter, index) => (
         <motion.span variants={child} key={index}>

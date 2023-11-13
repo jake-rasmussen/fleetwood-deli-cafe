@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from 'react'
 
-import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import { twMerge } from "tailwind-merge";
@@ -41,7 +41,7 @@ const Carousel = () => {
         
       }}
       extensions={{ AutoScroll }}
-      className={twMerge("w-full border-y-8 border-double border-black my-0", slides.length === 0 ? "invisible" : "")}
+      className={twMerge("w-screen border-y-8 border-double border-black my-0", slides.length === 0 ? "border-none" : "")}
     >
       {slides.map((slide) => slide)}
     </Splide >
