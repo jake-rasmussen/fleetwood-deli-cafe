@@ -38,10 +38,9 @@ const Carousel = () => {
           rewind: false,
           speed: 1,
         },
-        
       }}
       extensions={{ AutoScroll }}
-      className={twMerge("w-screen border-y-8 border-double border-black my-0", slides.length === 0 ? "border-none" : "")}
+      className={twMerge("w-screen border-y-8 border-double border-black my-0 hidden md:block", slides.length === 0 ? "border-none" : "")}
     >
       {slides.map((slide) => slide)}
     </Splide >

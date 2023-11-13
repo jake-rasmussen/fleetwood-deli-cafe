@@ -5,7 +5,7 @@ import Carousel from "./carousel";
 const Welcome = () => {
   return (<section className="flex flex-col items-center justify-center">
     <h2 className="italic py-1 px-6 font-serif font-semibold">
-      <AnimatedTextCharacter text={"A Place With Personality"} className="text-2xl md:text-5xl" />
+      <AnimatedTextCharacter text={"A Place With Personality"} className="text-2xl sm:text-3xl md:text-5xl" />
     </h2>
     <motion.div
       initial={{ x: -40, opacity: 0 }}
