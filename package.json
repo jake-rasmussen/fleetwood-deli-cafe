@@ -9,11 +9,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "@splidejs/react-splide": "^0.7.12",
-    "@splidejs/splide": "^4.1.4",
-    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@t3-oss/env-nextjs": "^0.3.1",
     "@tabler/icons-react": "^2.32.0",
+    "embla-carousel-autoplay": "^8.0.0-rc14",
+    "embla-carousel-react": "^8.0.0-rc14",
     "framer-motion": "^10.16.1",
     "fs": "^0.0.1-security",
     "next": "^13.4.2",

@@ -1,50 +1,109 @@
+import React, { useCallback, useEffect, useState } from "react";
+import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
+import { flushSync } from "react-dom";
+import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import React from 'react'
+import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
-import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-import { twMerge } from "tailwind-merge";
+const TWEEN_FACTOR = 4.2
 
-const Carousel = () => {
+const numberWithinRange = (number: number, min: number, max: number): number =>
+  Math.min(Math.max(number, min), max)
+
+const Caroousel = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3500, stopOnInteraction: false })]);
+  const [tweenValues, setTweenValues] = useState<number[]>([]);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+    emblaApi?.plugins().autoplay?.reset();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+    emblaApi?.plugins().autoplay?.reset();
+  }, [emblaApi]);
+
+
   const slides = [];
-  for (let i = 1; i <= 8; i++) {
+  for (let i = 1; i <= 10; i++) {
     slides.push(
-      <SplideSlide className="w-96" key={`slide${i}`}>
+      <div
+        className="embla__slide mx-1 h-[40rem]"
+        key={i - 1}
+        style={{
+          ...(tweenValues.length && { opacity: tweenValues[i - 1] })
+        }}
+      >
         <Image
           src={`/images/food/${i}.jpeg`}
           alt={"Food"}
           width="0"
           height="0"
           sizes="100vw"
-          className="h-auto w-full"
+          className="w-full h-full object-cover"
         />
-      </SplideSlide>
+      </div>
     )
   }
 
+  const onScroll = useCallback(() => {
+    if (!emblaApi) return
+
+    const engine = emblaApi.internalEngine()
+    const scrollProgress = emblaApi.scrollProgress()
+
+    const styles = emblaApi.scrollSnapList().map((scrollSnap, index) => {
+      let diffToTarget = scrollSnap - scrollProgress
+
+      if (engine.options.loop) {
+        engine.slideLooper.loopPoints.forEach((loopItem) => {
+          const target = loopItem.target()
+          if (index === loopItem.index && target !== 0) {
+            const sign = Math.sign(target)
+            if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress)
+            if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress)
+          }
+        })
+      }
+      const tweenValue = 1 - Math.abs(diffToTarget * TWEEN_FACTOR)
+      return numberWithinRange(tweenValue, 0, 1)
+    })
+    setTweenValues(styles)
+  }, [emblaApi, setTweenValues])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    onScroll()
+    emblaApi.on('scroll', () => {
+      flushSync(() => onScroll())
+    })
+    emblaApi.on('reInit', onScroll)
+  }, [emblaApi, onScroll])
+
   return (
-    <Splide
-      options={{
-        type: "loop",
-        drag: "free",
-        arrows: false,
-        perPage: 4,
-        gap: "0.5rem",
-        pagination: false,
-        autoScroll: {
-          pauseOnHover: false,
-          pauseOnFocus: false,
-          rewind: false,
-          speed: 1,
-        },
-      }}
-      extensions={{ AutoScroll }}
-      className={twMerge("w-screen border-y-8 border-double border-black my-0 hidden md:block", slides.length === 0 ? "border-none" : "")}
-    >
-      {slides.map((slide) => slide)}
-    </Splide >
-  );
+    <div className="embla h-full w-full relative border border-y-4 border-black">
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container grid auto-cols-[50%] grid-flow-col">
+          {slides.map((slide, index) => slide)}
+        </div>
+      </div>
+
+      <button
+        className="embla__prev z-30 absolute left-0 top-1/2 -translate-y-1/2 hidden transition duration-300 ease-in-out hover:scale-[200%] lg:block"
+        onClick={scrollPrev}
+      >
+        <IconChevronLeft className="h-24 w-24 text-black" />
+      </button>
+      <button
+        className="embla__next z-30 absolute right-0 top-1/2 -translate-y-1/2 hidden transition duration-300 ease-in-out hover:scale-[200%] lg:block"
+        onClick={scrollNext}
+      >
+        <IconChevronRight className="h-24 w-24 text-black" />
+      </button>
+    </div>
+  )
 }
 
-export default Carousel;
+export default Caroousel;

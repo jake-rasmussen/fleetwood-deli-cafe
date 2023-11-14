@@ -43,7 +43,7 @@ const Contact = () => {
         </div>
         <div className="flex flex-col whitespace-nowrap text-start">
           <span>6:00AM-1:30PM</span>
-          <span>5:00AM-5:00PM</span>
+          <span>5:00AM-4:00PM</span>
           <span>6:00AM- 3:00PM</span>
         </div>
       </div>
