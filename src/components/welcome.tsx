@@ -5,7 +5,7 @@ import Carousel from "./carousel";
 const Welcome = () => {
   return (<section className="flex flex-col items-center justify-center">
     <h2 className="italic py-1 px-6 font-serif font-semibold">
-      <AnimatedTextCharacter text={"A Place With Personality"} className="text-2xl sm:text-3xl md:text-5xl" />
+      <AnimatedTextCharacter text={"A Place With Personality"} className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl" />
     </h2>
     <motion.div
       initial={{ x: -40, opacity: 0 }}
@@ -20,14 +20,14 @@ const Welcome = () => {
       </div>
     </motion.div>
 
-    <div className="flex flex-col md:flex-row relative my-10">
+    <div className="flex flex-col lg:flex-row relative my-10">
       <motion.div
         initial={{ x: -40, opacity: 0 }}
         animate={{ x: 0, opacity: 100 }}
         transition={{ delay: 1.3 }}
         className="flex flex-col items-center md:m-10"
       >
-        <h1 className="font-black text-5xl uppercase mb-2">
+        <h1 className="font-black text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:no-underline underline uppercase mb-2">
           Our Hours
         </h1>
         <div className="flex flex-row text-2xl">
@@ -57,7 +57,7 @@ const Welcome = () => {
         transition={{ delay: 1.4 }}
         className="text-center m-10"
       >
-        <h1 className="font-black text-5xl uppercase mb-2">
+        <h1 className="font-black text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:no-underline underline uppercase mb-2">
           Our Address
         </h1>
         <span className="font-semibold uppercase text-xl">

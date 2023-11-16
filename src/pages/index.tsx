@@ -21,7 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen bg-tan overflow-x-scroll">
-        <section className="border border-8 border-black md:m-10 border-double bg-gradient-to-r from-[#D9FAFF] to-[#E6FBFF] py-20">
+        <section className="border-8 border-black md:m-10 border-double bg-gradient-to-r from-[#A1F6FF] to-[#E6FBFF] py-20 shadow-2xl">
           <header className="pb-14 text-center">
             <div className="flex flex-col justify-center items-center">
               <h2 className="italic py-1 px-6 border border-1 rounded-full border-black tracking-widest font-serif bg-white text-2xl md:text-3xl">The Fleetwood</h2>
