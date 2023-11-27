@@ -6,7 +6,7 @@ const FoodCard = (props: FoodType) => {
     price,
     options,
     optionsInline,
-    description
+    description,
   } = props;
 
   const USDollar = new Intl.NumberFormat("en-US", {

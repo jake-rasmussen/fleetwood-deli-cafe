@@ -3,6 +3,12 @@ export type CateringInfoType = {
   description: string;
 }
 
+export type CateringInfoListType = {
+  name: string;
+  foods: string[];
+  disclaimer?: string;
+}
+
 export const catering: CateringInfoType[] = [
   {
     name: "Continental Breakfast",
@@ -36,4 +42,110 @@ export const catering: CateringInfoType[] = [
     name: "Italian Hot Lunch",
     description: "Includes your choice of entree, pasta and salad. Served with bread, cookies and soda"
   }
+]
+
+export const cateringList: CateringInfoListType[] = [
+  {
+    name: "Hot Catered Entrées",
+    foods: [
+      "Baked Ziti",
+      "Penne a la Vodka",
+      "Fettuccinne Alfredo",
+      "Ziti & Broccoli in Garlic & Oil",
+      "Farfalle with Fresh Tomato & Eggplant",
+      "Stuffed Shells",
+      "Ravioli",
+      "Pasta Primavera",
+      "Lasagna (Beef or Veggie)",
+      "Chicken: Francese, Piccata, Marsla, Parmesan, Rocket, Espagna, Vesuvio, Cacciatore, Scarpariello, Rosemary or Hawaiian",
+      "Pepper Steak",
+      "Meatballs",
+      "Beef & Broccoli",
+      "Sausage & Peppers",
+      "Baked Tilapia",
+      "Poached Salmon", 
+      "Shrimp Any Style", 
+      "Eggplant Parmesan or Rollatini",
+      "Steamed or Grilled Vegetables",
+    ]
+  },
+  {
+    name: "Salad Trays",
+    foods: [
+      "Mixed Field Greens",
+      "Ana’s Salad with Dried Cranberries, Nuts, Goat Cheese, Sliced",
+      "Classic Caesar Salad",
+      "Grilled Chicken Caesar Salad",
+      "Israeli Chopped Salad with Tomatoes, Cucumbers and Dill",
+      "Greek Salad",
+      "Pasta Salad",
+      "Choice of: Antonio’s, Rotini, Couscous, Pepper Tricolor",
+    ],
+    disclaimer: "Priced according to quantities"
+  },
+  {
+    name: "Appetizer Trays",
+    foods: [
+      "Stuffed Mushrooms",
+      "Vegetable Egg Rolls",
+      "Chicken Dumplings",
+      "Mozzerella Sticks",
+      "Wings Any Style",
+      "Mini Quiches",
+      "Swedish Meatballs",
+      "Quesadillas and More",
+    ],
+    disclaimer: "Priced according to quantities"
+  },
+  {
+    name: "Pit BBQ & Southern Fried",
+    foods: [
+      "St. Louis Ribs",
+      "Carolina Pulled Pork (Chopped BBQ)",
+      "Southern Fried Chicken",
+      "Baked BBQ or Jerk Chicken",
+      "Smother Chicken or Pork Chops",
+      "Curry Chicken",
+      "Beef Ribs",
+      "Oxtails",
+      "Fried Whiting",
+      "Turkey Meatloaf"
+    ]
+  },
+  {
+    name: "Mom's Sides",
+    foods: [
+      "Real Bakes Macaroni & Cheese",
+      "Collared Greens",
+      "Bakes Beans",
+      "Smashed Potatoes",
+      "Rice and Peas",
+      "Fried Rice",
+      "Sweet Plantains",
+      "Buttered Corn",
+      "Coleslaw",
+      "Creamed Spinach",
+      "Broccoli",
+      "Steamed Cabbage",
+      "String Bean Casserole",
+      "Red Roasted Potatoes",
+      "Spanish Rice",
+      "Okra Potato Salad",
+      "Macaroni Salad"
+    ]
+  },
+  {
+    name: "Desserts",
+    foods: [
+      "Fresh Baked Cookies", 
+      "Red Velvet Layer Cake", 
+      "Muffins", 
+      "Croissants", 
+      "Cupcakes", 
+      "Brownies", 
+      "Crumb Cakes", 
+      "Pound Cakes", 
+      "Mini Italian Pastries"
+    ]
+  },
 ]

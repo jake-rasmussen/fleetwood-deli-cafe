@@ -35,7 +35,7 @@ export const menu: MenuSectionType[] = [
         options: [
           {
             option: "Cheese",
-            price: .25
+            price: .50
           },
           {
             option: "Egg White",
@@ -43,7 +43,7 @@ export const menu: MenuSectionType[] = [
           },
           {
             option: "Bagel",
-            price: .25
+            price: .50
           },
           {
             option: "Croissant",
@@ -56,7 +56,7 @@ export const menu: MenuSectionType[] = [
         ]
       },
       {
-        food: "Egg Wrap",
+        food: "Bacon Egg and Cheese Wrap",
         price: 5.75,
         description: "2 Eggs, Bacon and Cheese"
       },
@@ -92,8 +92,19 @@ export const menu: MenuSectionType[] = [
         description: "Made with Challah Bread"
       },
       {
+        food: "French Toast",
+        price: 8.49,
+        options: [
+          {
+            option: "Add Bacon, Sausage or Ham",
+            price: 1.75
+          }
+        ],
+        description: "Made with Challah Bread"
+      },
+      {
         food: "Pancakes",
-        price: 7.99,
+        price: 8.49,
         options: [
           {
             option: "Add Bacon, Sausage or Ham",
@@ -104,6 +115,25 @@ export const menu: MenuSectionType[] = [
       {
         food: "Turkey Bacon or Chicken Sausage Available",
         price: 2.00,
+      },
+      {
+        food: "Old Fashioned Oatmeal",
+        optionsInline: [
+          {
+            option: "S",
+            price: 3.99
+          },
+          {
+            option: "L",
+            price: 6.99
+          }
+        ],
+        options: [
+          {
+            option: "Add Cranberries, Almonds or Cinnamon",
+            price: 0.75
+          }
+        ]
       },
     ]
   },
@@ -135,26 +165,24 @@ export const menu: MenuSectionType[] = [
     ]
   },
   {
-    name: "Burders & Sides",
+    name: "Burgers & Sides",
     foods: [
       {
         food: "6oz Fresh Beef Burger",
-        price: 7.99,
-        description: "Includes Cheddar Cheese"
+        price: 7.99
       },
       {
         food: "Fried Egg Beef Burger",
-        price: 8.49,
-        description: "Includes Grilled Onions"
+        price: 8.49
       },
       {
         food: "Quesadillas",
-        price: 7.99,
+        price: 9.99,
         description: "Includes 3 Cheeses"
       },
       {
-        food: "Chicken and Cheese Quesadillas",
-        price: 9.99,
+        food: "Chicken Quesadillas",
+        price: 12.99,
         options: [
           {
             option: "Additional Sides",
@@ -164,11 +192,11 @@ export const menu: MenuSectionType[] = [
       },
       {
         food: "Fries or Knish",
-        price: 3.99,
+        price: 4.99,
       },
       {
         food: "Potato, Macaroni Salad or Coleslaw 1/2 LB",
-        price: 3.00,
+        price: 4.99,
       },
     ]
   },

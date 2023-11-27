@@ -9,7 +9,7 @@ import TabHeader from "~/components/tab/tabHeader";
 import TabList from "~/components/tab/tabList";
 
 import { menu } from "~/menu";
-import { catering } from "~/catering";
+import { catering, cateringList } from "~/catering";
 import Welcome from "~/components/welcome";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen bg-tan overflow-x-scroll">
-        <section className="border-8 border-black md:m-10 border-double bg-gradient-to-r from-[#A1F6FF] to-[#E6FBFF] py-20 shadow-2xl">
+        <section className="border-8 border-black md:m-[5vh] min-h-[90vh] border-double bg-gradient-to-r from-[#A1F6FF] to-[#E6FBFF] py-20 shadow-2xl">
           <header className="pb-14 text-center">
             <div className="flex flex-col justify-center items-center">
               <h2 className="italic py-1 px-6 border border-1 rounded-full border-black tracking-widest font-serif bg-white text-2xl md:text-3xl">The Fleetwood</h2>
@@ -45,7 +45,10 @@ export default function Home() {
                 <Menu menu={menu} />
               </TabContent>
               <TabContent>
-                <Catering catering={catering} />
+                <Catering 
+                  catering={catering} 
+                  cateringList={cateringList}  
+                />
               </TabContent>
               <TabContent>
                 <About />
