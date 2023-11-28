@@ -44,6 +44,7 @@ const CateringCarousel = (props: PropType) => {
           height="0"
           sizes="100vw"
           className="w-full h-full object-cover"
+          priority={true}
         />
       </div>
     )});

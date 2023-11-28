@@ -9,7 +9,7 @@ const CateringListSection = (cateringListInfo: CateringInfoListType) => {
 
   return (
     <section className="relative max-w-lg font-serif">
-      <header className="border-y-4 py-4 border-black font-sans">
+      <header className="border-y-4 py-4 border-[#7c9bc4] font-sans">
         <h3 className="text-4xl font-semibold uppercase text-center">{name}</h3>
       </header>
       <div className="my-10 mx-auto w-fit">

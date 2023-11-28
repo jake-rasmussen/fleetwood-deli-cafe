@@ -88,7 +88,7 @@ const Carousel = (props: PropType) => {
   }, [emblaApi, onScroll])
 
   return (
-    <div className="embla h-full w-full relative border border-y-4 border-black">
+    <div className="embla h-full w-full relative border border-y-4 border-[#730d0d]">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container grid auto-cols-[50%] grid-flow-col">
           {slides.map((slide, index) => slide)}
