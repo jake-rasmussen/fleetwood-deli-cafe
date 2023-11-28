@@ -3,7 +3,12 @@ import AnimatedTextCharacter from "./animatedText";
 import Carousel from "./carousel";
 
 const Welcome = () => {
-  return (<section className="flex flex-col items-center justify-center">
+  const imagePaths = [];
+  for (let i = 1; i <= 10; i++) {
+    imagePaths.push(`/images/food/${i}.jpeg`)
+  }
+
+  return (<section className="flex flex-col items-center justify-center w-full">
     <h2 className="italic py-1 px-6 font-serif font-semibold">
       <AnimatedTextCharacter text={"A Place With Personality"} className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl" />
     </h2>
@@ -67,8 +72,8 @@ const Welcome = () => {
       </motion.div>
     </div>
 
-    <div className="my-8 hidden lg:block overflow-hidden">
-      <Carousel />
+    <div className="my-8 hidden lg:block overflow-hidden w-full">
+      <Carousel imagePaths={imagePaths} />
     </div>
 
 

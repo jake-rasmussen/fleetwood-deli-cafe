@@ -98,21 +98,6 @@ export const cateringList: CateringInfoListType[] = [
     disclaimer: "Priced according to quantities"
   },
   {
-    name: "Pit BBQ & Southern Fried",
-    foods: [
-      "St. Louis Ribs",
-      "Carolina Pulled Pork (Chopped BBQ)",
-      "Southern Fried Chicken",
-      "Baked BBQ or Jerk Chicken",
-      "Smother Chicken or Pork Chops",
-      "Curry Chicken",
-      "Beef Ribs",
-      "Oxtails",
-      "Fried Whiting",
-      "Turkey Meatloaf"
-    ]
-  },
-  {
     name: "Mom's Sides",
     foods: [
       "Real Bakes Macaroni & Cheese",
@@ -132,6 +117,21 @@ export const cateringList: CateringInfoListType[] = [
       "Spanish Rice",
       "Okra Potato Salad",
       "Macaroni Salad"
+    ]
+  },
+  {
+    name: "Pit BBQ & Southern Fried",
+    foods: [
+      "St. Louis Ribs",
+      "Carolina Pulled Pork (Chopped BBQ)",
+      "Southern Fried Chicken",
+      "Baked BBQ or Jerk Chicken",
+      "Smother Chicken or Pork Chops",
+      "Curry Chicken",
+      "Beef Ribs",
+      "Oxtails",
+      "Fried Whiting",
+      "Turkey Meatloaf"
     ]
   },
   {

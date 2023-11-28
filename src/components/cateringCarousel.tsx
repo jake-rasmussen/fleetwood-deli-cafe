@@ -14,7 +14,7 @@ type PropType = {
   imagePaths: string[];
 }
 
-const Carousel = (props: PropType) => {
+const CateringCarousel = (props: PropType) => {
   const { imagePaths } = props;
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3500, stopOnInteraction: false })]);
@@ -34,11 +34,8 @@ const Carousel = (props: PropType) => {
   imagePaths.forEach((imagePath, i) => {
     slides.push(
       <div
-        className={`embla__slide mx-1 h-[40rem]`}
+        className={`embla__slide mx-1 h-[20rem]`}
         key={i - 1}
-        style={{
-          ...(tweenValues.length && { opacity: tweenValues[i] })
-        }}
       >
         <Image
           src={imagePath}
@@ -87,9 +84,9 @@ const Carousel = (props: PropType) => {
   }, [emblaApi, onScroll])
 
   return (
-    <div className="embla h-full w-full relative border border-y-4 border-black">
+    <div className="embla h-full mx-20 relative border border-4 border-black overflow-hidden">
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container grid auto-cols-[50%] grid-flow-col">
+        <div className="embla__container grid auto-cols-[35%] grid-flow-col">
           {slides.map((slide, index) => slide)}
         </div>
       </div>
@@ -110,4 +107,4 @@ const Carousel = (props: PropType) => {
   )
 }
 
-export default Carousel;
+export default CateringCarousel;
