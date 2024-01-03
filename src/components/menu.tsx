@@ -32,23 +32,6 @@ const Menu = ({ menu }: { menu: MenuSectionType[] }) => {
             </motion.div>
           );
         })}
-      </div>
-      <div>
-        {rightMenu.map((item: MenuSectionType, index: number) => {
-          return (
-            <motion.div
-              initial={{ x: -20, opacity: 0 }}
-              animate={{ x: 0, opacity: 100 }}
-              key={`menuRight${index}`}
-            >
-              <MenuSection
-                name={item.name}
-                foods={item.foods}
-                universalOptions={item.universalOptions}
-              />
-            </motion.div>
-          );
-        })}
         {rightMenu.length !== 0 && leftMenu.length !== 0 ? (
           <section className="relative max-w-xl">
             <header className="border-y-4 py-4  border-deepred px-20">
@@ -72,6 +55,23 @@ const Menu = ({ menu }: { menu: MenuSectionType[] }) => {
         ) : (
           <></>
         )}
+      </div>
+      <div>
+        {rightMenu.map((item: MenuSectionType, index: number) => {
+          return (
+            <motion.div
+              initial={{ x: -20, opacity: 0 }}
+              animate={{ x: 0, opacity: 100 }}
+              key={`menuRight${index}`}
+            >
+              <MenuSection
+                name={item.name}
+                foods={item.foods}
+                universalOptions={item.universalOptions}
+              />
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );
