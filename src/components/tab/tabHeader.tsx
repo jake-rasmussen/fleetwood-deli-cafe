@@ -15,10 +15,10 @@ const TabHeader = (props: PropType) => {
   buttonClassName = twMerge(buttonClassName, isActive ? "border-black" : "");
 
   let textClassName =
-    "items-center flex justify-center transition duration-300 ease-in-out px-2 text-xl md:text-2xl font-black tracking-none uppercase font-serif";
+    "items-center flex justify-center transition duration-300 ease-in-out px-2 text-xl lg:text-2xl xl:text-3xl font-black tracking-none uppercase font-serif";
   textClassName = twMerge(
     textClassName,
-    isActive ? "text-primary scale-125" : "",
+    isActive ? "text-deepred scale-125" : "",
   );
 
   return (

@@ -20,6 +20,125 @@ export type FoodType = {
 
 export const menu: MenuSectionType[] = [
   {
+    name: "Sandwiches",
+    foods: [
+      {
+        food: "Ham and Cheese",
+        price: 8.99
+      },
+      {
+        food: "Grilled Cheese",
+        price: 5.29
+      },
+      {
+        food: "BLT",
+        price: 5.49
+      },
+      {
+        food: "Bologna",
+        price: 7.99
+      },
+      {
+        food: "Turkey",
+        price: 11.99
+      },
+      {
+        food: "Roast Beef",
+        price: 11.99
+      },
+      {
+        food: "Pastrami",
+        price: 11.99
+      },
+      {
+        food: "Genoa Salami",
+        price: 8.99
+      },
+      {
+        food: "Corned Beef",
+        price: 11.99
+      },
+      {
+        food: "Grilled Chicken",
+        price: 9.99
+      },
+      {
+        food: "Chicken Salad",
+        price: 9.99
+      },
+      {
+        food: "Tuna Salad",
+        price: 9.99
+      },
+      {
+        food: "Egg Salad",
+        price: 8.99,
+      },
+      {
+        food: "Chicken Cutlet",
+        price: 9.99
+      },
+      {
+        food: "Eggplant Parmigiana",
+        price: 9.99
+      },
+      {
+        food: "Chicken Cutlet Parmigiana",
+        price: 11.99
+      },
+      {
+        food: "Turkey or Ham and Cheese Croissant",
+        price: 5.99
+      },
+    ],
+    universalOptions: [
+      {
+        food: "Cheese",
+        price: 0.50
+      },
+      {
+        food: "Mozz. & P. Jack",
+        price: 0.75
+      },
+      {
+        food: "Tomato",
+        price: 0.50
+      },
+      {
+        food: "Hot Peppers",
+        price: 0.50
+      },
+      {
+        food: "Roasted Peppers",
+        price: 0.50
+      },
+      {
+        food: "Coleslaw",
+        price: 0.50
+      },
+      {
+        food: "Jalapeño",
+        price: 0.50
+      },
+      {
+        food: "Bacon",
+        price: 1.75
+      },
+      {
+        food: "Wraps",
+        price: 1.00
+      },
+      {
+        food: "Croissant",
+        price: 1.50
+      },
+      {
+        food: "Wedge",
+        price: 1.50
+      },
+    ]
+  },
+  {
     name: "Breakfast",
     foods: [
       {
@@ -165,39 +284,34 @@ export const menu: MenuSectionType[] = [
     ]
   },
   {
-    name: "Burgers & Sides",
+    name: "Fresh Brewed",
     foods: [
       {
-        food: "6oz Fresh Beef Burger",
-        price: 7.99
+        food: "Colombian Supremo Coffee",
+        description: "Regular, Hazelnut or Decaf"
       },
       {
-        food: "Fried Egg Beef Burger",
-        price: 8.49
+        food: "Lipton and Herbal Teas"
       },
       {
-        food: "Quesadillas",
-        price: 9.99,
-        description: "Includes 3 Cheeses"
+        food: "Cappucino or Latte"
       },
       {
-        food: "Chicken Quesadillas",
-        price: 12.99,
-        options: [
-          {
-            option: "Additional Sides",
-            price: 1.5
-          }
-        ]
+        food: "Espresso"
       },
       {
-        food: "Fries or Knish",
-        price: 4.99,
+        food: "Hot Chocolate"
       },
       {
-        food: "Potato, Macaroni Salad or Coleslaw 1/2 LB",
-        price: 4.99,
+        food: "Chai Tea"
       },
+      {
+        food: "Iced Coffee",
+        description: "Regular, Hazelnut or Decaf"
+      },
+      {
+        food: "Iced Tea"
+      }
     ]
   },
   {
@@ -324,157 +438,42 @@ export const menu: MenuSectionType[] = [
       }
     ],
   },
-  {
-    name: "Fresh Brewed",
+{
+    name: "Burgers & Sides",
     foods: [
       {
-        food: "Colombian Supremo Coffee",
-        description: "Regular, Hazelnut or Decaf"
-      },
-      {
-        food: "Lipton and Herbal Teas"
-      },
-      {
-        food: "Cappucino or Latte"
-      },
-      {
-        food: "Espresso"
-      },
-      {
-        food: "Hot Chocolate"
-      },
-      {
-        food: "Chai Tea"
-      },
-      {
-        food: "Iced Coffee",
-        description: "Regular, Hazelnut or Decaf"
-      },
-      {
-        food: "Iced Tea"
-      }
-    ]
-  },
-  {
-    name: "Sandwiches",
-    foods: [
-      {
-        food: "Ham and Cheese",
-        price: 8.99
-      },
-      {
-        food: "Grilled Cheese",
-        price: 5.29
-      },
-      {
-        food: "BLT",
-        price: 5.49
-      },
-      {
-        food: "Bologna",
+        food: "6oz Fresh Beef Burger",
         price: 7.99
       },
       {
-        food: "Turkey",
-        price: 11.99
+        food: "Fried Egg Beef Burger",
+        price: 8.49
       },
       {
-        food: "Roast Beef",
-        price: 11.99
+        food: "Quesadillas",
+        price: 9.99,
+        description: "Includes 3 Cheeses"
       },
       {
-        food: "Pastrami",
-        price: 11.99
+        food: "Chicken Quesadillas",
+        price: 12.99,
+        options: [
+          {
+            option: "Additional Sides",
+            price: 1.5
+          }
+        ]
       },
       {
-        food: "Genoa Salami",
-        price: 8.99
+        food: "Fries or Knish",
+        price: 4.99,
       },
       {
-        food: "Corned Beef",
-        price: 11.99
-      },
-      {
-        food: "Grilled Chicken",
-        price: 9.99
-      },
-      {
-        food: "Chicken Salad",
-        price: 9.99
-      },
-      {
-        food: "Tuna Salad",
-        price: 9.99
-      },
-      {
-        food: "Egg Salad",
-        price: 8.99,
-      },
-      {
-        food: "Chicken Cutlet",
-        price: 9.99
-      },
-      {
-        food: "Eggplant Parmigiana",
-        price: 9.99
-      },
-      {
-        food: "Chicken Cutlet Parmigiana",
-        price: 11.99
-      },
-      {
-        food: "Turkey or Ham and Cheese Croissant",
-        price: 5.99
-      },
-    ],
-    universalOptions: [
-      {
-        food: "Cheese",
-        price: 0.50
-      },
-      {
-        food: "Mozz. & P. Jack",
-        price: 0.75
-      },
-      {
-        food: "Tomato",
-        price: 0.50
-      },
-      {
-        food: "Hot Peppers",
-        price: 0.50
-      },
-      {
-        food: "Roasted Peppers",
-        price: 0.50
-      },
-      {
-        food: "Coleslaw",
-        price: 0.50
-      },
-      {
-        food: "Jalapeño",
-        price: 0.50
-      },
-      {
-        food: "Bacon",
-        price: 1.75
-      },
-      {
-        food: "Wraps",
-        price: 1.00
-      },
-      {
-        food: "Croissant",
-        price: 1.50
-      },
-      {
-        food: "Wedge",
-        price: 1.50
+        food: "Potato, Macaroni Salad or Coleslaw 1/2 LB",
+        price: 4.99,
       },
     ]
   },
-
   {
     name: "Specialty Combo",
     foods: [

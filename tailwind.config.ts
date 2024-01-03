@@ -11,7 +11,7 @@ export default {
         deepred: "#BB1D2D",
         blue: "#6DA4D0",
         lightblue: "#85ACFB",
-      }
+      },
     },
   },
   plugins: [],
