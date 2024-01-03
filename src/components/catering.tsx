@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { CateringInfoListType, type CateringInfoType } from "~/catering";
+import { type CateringInfoListType, type CateringInfoType } from "~/catering";
 import CateringCard from "./cateringCard";
 import { motion } from "framer-motion";
 import CateringListSection from "./cateringListSection";
-import Carousel from "./carousel";
 import CateringCarousel from "./cateringCarousel";
 
 const Catering = ({
@@ -36,7 +35,7 @@ const Catering = ({
 
   const imagePaths: string[] = [];
   for (let i = 1; i <= 4; i++) {
-    imagePaths.push(`/images/catering/${i}.jpeg`);
+    imagePaths.push("/images/catering/" + i + ".jpeg");
   }
 
   return (

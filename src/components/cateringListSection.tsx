@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CateringFoodType, CateringInfoListType } from "~/catering";
+import { type CateringFoodType, type CateringInfoListType } from "~/catering";
 
 const CateringListSection = (cateringListInfo: CateringInfoListType) => {
   const { name, foods, disclaimer } = cateringListInfo;
@@ -55,8 +55,7 @@ const CateringListSection = (cateringListInfo: CateringInfoListType) => {
           })}
         </div>
         <div className="m-4">
-          {disclaimer &&
-            disclaimer.map((text: string, index: number) => (
+          {disclaimer?.map((text: string, index: number) => (
               <div
                 key={`${name}${disclaimer}${index}`}
                 className="mx-8 lg:mx-20 text-center"

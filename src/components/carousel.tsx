@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
+import useEmblaCarousel from "embla-carousel-react";
 import { flushSync } from "react-dom";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
@@ -37,7 +37,7 @@ const Carousel = (props: PropType) => {
     slides.push(
       <div
         className={`embla__slide mx-1 h-[40rem]`}
-        key={i - 1}
+        key={`slide${i - 1}`}
         style={{
           ...(tweenValues.length && { opacity: tweenValues[i] }),
         }}
@@ -94,7 +94,7 @@ const Carousel = (props: PropType) => {
     <div className="embla h-full w-full relative border border-y-4 border-[#730d0d]">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container grid auto-cols-[50%] grid-flow-col">
-          {slides.map((slide, index) => slide)}
+          {slides.map((slide) => slide)}
         </div>
       </div>
 
