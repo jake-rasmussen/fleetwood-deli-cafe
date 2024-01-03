@@ -1,11 +1,17 @@
 import React from "react";
 import { delay, motion } from "framer-motion";
 
-const AnimatedTextCharacter = ({ text, className }: { text: string, className?: string }) => {
-// splitting text into letters
+const AnimatedTextCharacter = ({
+  text,
+  className,
+}: {
+  text: string;
+  className?: string;
+}) => {
+  // splitting text into letters
   const letters = Array.from(text);
 
-// Variants for Container
+  // Variants for Container
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
@@ -14,7 +20,7 @@ const AnimatedTextCharacter = ({ text, className }: { text: string, className?: 
     }),
   };
 
-// Variants for each letter
+  // Variants for each letter
   const child = {
     visible: {
       opacity: 1,
@@ -48,7 +54,9 @@ const AnimatedTextCharacter = ({ text, className }: { text: string, className?: 
     >
       {letters.map((letter, index) => (
         <motion.span variants={child} key={index}>
-          <span className={className}>{letter === " " ? "\u00A0" : letter}</span>
+          <span className={className}>
+            {letter === " " ? "\u00A0" : letter}
+          </span>
         </motion.span>
       ))}
     </motion.div>
