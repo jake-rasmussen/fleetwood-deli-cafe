@@ -32,29 +32,6 @@ const Menu = ({ menu }: { menu: MenuSectionType[] }) => {
             </motion.div>
           );
         })}
-        {rightMenu.length !== 0 && leftMenu.length !== 0 ? (
-          <section className="relative max-w-xl">
-            <header className="border-y-4 py-4  border-deepred px-20">
-              <h3 className="text-4xl font-semibold uppercase text-center">
-                Steam Table
-              </h3>
-            </header>
-            <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row my-10 items-center">
-              <div className="m-4 text-center font-serif">
-                Featuring Daily Selections from our Italian, Caribbean, Mexican,
-                Chinese, BBQ and Classic American Menus
-              </div>
-              <div className="mx-4 text-center font-serif sm:min-w-fit font-bold">
-                Open{" "}
-                <span className="whitespace-nowrap">Monday - Saturday</span>
-                <br />
-                10AM - 3PM
-              </div>
-            </div>
-          </section>
-        ) : (
-          <></>
-        )}
       </div>
       <div>
         {rightMenu.map((item: MenuSectionType, index: number) => {
@@ -72,6 +49,29 @@ const Menu = ({ menu }: { menu: MenuSectionType[] }) => {
             </motion.div>
           );
         })}
+        {rightMenu.length !== 0 && leftMenu.length !== 0 ? (
+          <section className="relative max-w-xl">
+            <header className="border-y-4 py-4  border-deepred px-20">
+              <h3 className="text-4xl font-semibold uppercase text-center">
+                Steam Table
+              </h3>
+            </header>
+            <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row my-10 items-center">
+              <div className="m-4 text-center font-serif sm:text-lg">
+                Featuring Daily Selections from our Italian, Caribbean, Mexican,
+                Chinese, BBQ and Classic American Menus
+              </div>
+              <div className="mx-4 text-center font-serif sm:min-w-fit font-bold">
+                Open{" "}
+                <span className="whitespace-nowrap">Monday - Saturday</span>
+                <br />
+                10AM - 3PM
+              </div>
+            </div>
+          </section>
+        ) : (
+          <></>
+        )}
       </div>
     </section>
   );

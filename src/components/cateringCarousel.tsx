@@ -48,7 +48,7 @@ const CateringCarousel = (props: PropType) => {
   }
 
   return (
-    <div className="embla h-full mx-20 relative border border-4 border-black overflow-hidden">
+    <div className="embla h-full mx-20 relative border border-4 border-black overflow-hidden rounded-xl">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container grid auto-cols-[35%] grid-flow-col">
           {slides.map((slide) => slide)}

@@ -30,7 +30,6 @@ export default function Home() {
               <h1 className="font-black uppercase text-5xl sm:text-6xl md:text-8xl lg:text-9xl text-black">
                 Deli & Cafe
               </h1>
-
             </div>
           </header>
 

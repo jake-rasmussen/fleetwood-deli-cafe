@@ -34,7 +34,7 @@ const Catering = ({
   }, [catering, cateringList]);
 
   const imagePaths: string[] = [];
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 1; i <= 5; i++) {
     imagePaths.push("/images/catering/" + i + ".jpeg");
   }
 
@@ -50,7 +50,11 @@ const Catering = ({
                 transition={{ delay: index / 50 }}
                 key={`cateringLeft${index}`}
               >
-                <CateringCard name={item.name} description={item.description} />
+                <CateringCard
+                  name={item.name}
+                  description={item.description}
+                  pricing={item.pricing}
+                />
               </motion.div>
             );
           })}
@@ -64,7 +68,7 @@ const Catering = ({
                 transition={{ delay: index / 50 }}
                 key={`cateringRight${index}`}
               >
-                <CateringCard name={item.name} description={item.description} />
+                <CateringCard name={item.name} description={item.description} pricing={item.pricing} />
               </motion.div>
             );
           })}
@@ -83,6 +87,7 @@ const Catering = ({
                 name={leftCateringList[0].name}
                 foods={leftCateringList[0].foods}
                 disclaimer={leftCateringList[0].disclaimer}
+                header={leftCateringList[0].header}
               />
             </motion.div>
           </div>
@@ -99,6 +104,7 @@ const Catering = ({
                 name={rightCateringList[0].name}
                 foods={rightCateringList[0].foods}
                 disclaimer={rightCateringList[0].disclaimer}
+                header={rightCateringList[0].header}
               />
             </motion.div>
           </div>
@@ -129,6 +135,7 @@ const Catering = ({
                     name={item.name}
                     foods={item.foods}
                     disclaimer={item.disclaimer}
+                    header={item.header}
                   />
                 </motion.div>
               );

@@ -42,17 +42,17 @@ const MenuSection = (props: MenuSectionType) => {
             );
           })}
         </div>
-        <div className="absolute right-0 -translate-y-4 sm:-translate-x-4">
+        <div className="absolute right-0 -translate-y-4 sm:-translate-x-4 sm:mr-0 xs:mr-8 mr-0">
           {universalOptions?.map((food: FoodType, index: number) => {
             return (
               <div
                 className="flex flex-row items-center"
                 key={`universalOption${index}`}
               >
-                <h5 className="font-serif font-medium text-sm sm:text-md whitespace-nowrap font-semibold">
+                <h5 className="font-serif font-medium sm:text-xl text-sm whitespace-nowrap font-semibold">
                   {food.food}
                 </h5>
-                <span className="mx-2 font-black font-sans text-deepred text-xs sm:text-sm">
+                <span className="mx-2 font-black font-sans text-deepred text-xs md:text-lg">
                   {food.price?.toFixed(2)}
                 </span>
               </div>

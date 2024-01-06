@@ -6,10 +6,10 @@ const FoodCard = (props: FoodType) => {
   return (
     <section className="font-serif">
       <div className="flex flex-row items-center">
-        <h5 className="font-medium whitespace-nowrap sm:text-lg text-md font-semibold">
+        <h5 className="font-medium whitespace-nowrap sm:text-xl text-md font-semibold">
           {food}
         </h5>
-        <span className="mx-2 font-black font-sans text-deepred text-xs md:text-md">
+        <span className="mx-2 font-black font-sans text-deepred text-xs md:text-lg">
           {price?.toFixed(2)}
         </span>
         {optionsInline?.map((option, index: number) => {
@@ -27,15 +27,15 @@ const FoodCard = (props: FoodType) => {
         {options?.map((option, index: number) => {
           return (
             <div className="ml-4" key={`option${index}`}>
-              <span>{option.option}</span>
-              <span className="mx-2 font-black font-sans text-xs text-deepred">
+              <span className="text-xs md:text-lg">{option.option}</span>
+              <span className="mx-2 font-black font-sans text-xs sm:text-sm text-deepred">
                 {option.price?.toFixed(2)}
               </span>
             </div>
           );
         })}
       </div>
-      <div className="ml-4 max-w-md sm:text-md text-sm">
+      <div className="ml-4 max-w-md sm:text-lg text-sm">
         {description && description}
       </div>
     </section>
