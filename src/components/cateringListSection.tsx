@@ -19,18 +19,23 @@ const CateringListSection = (cateringListInfo: CateringInfoListType) => {
           header && "mt-4 mb-0",
         )}
       >
-        <div className="mb-4">
-          {header?.map((text: string, index: number) => (
-            <div
-              key={`${name}${disclaimer}${index}`}
-              className="mx-8 lg:mx-20 text-center"
-            >
-              <span className="text-deepred font-sans uppercase font-semibold">
-                {text}
-              </span>
-            </div>
-          ))}
-        </div>
+        {
+          header &&
+          <div className="mb-4">
+            {header.map((text: string, index: number) => (
+              <div
+                key={`${name}${disclaimer}${index}`}
+                className="mx-8 lg:mx-20 text-center"
+              >
+                <span className="text-deepred font-sans uppercase font-semibold">
+                  {text}
+                </span>
+              </div>
+            ))}
+          </div>
+        }
+
+
         <div className="mx-auto w-fit mx-4">
           {foods.map((food: string | CateringFoodType, index: number) => {
             return (
@@ -51,7 +56,7 @@ const CateringListSection = (cateringListInfo: CateringInfoListType) => {
                   </h5>
                 ) : (
                   <>
-                    {}
+                    { }
                     <div className="flex flex-row items-center ">
                       <h5 className="whitespace-nowrap font-medium sm:text-xl text-md font-semibold">
                         {food.name}

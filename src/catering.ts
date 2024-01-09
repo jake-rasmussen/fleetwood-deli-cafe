@@ -131,7 +131,7 @@ export const cateringList: CateringInfoListType[] = [
       },
       {
         name: "Meatball Italian or Swedish",
-        info: "65/120",
+        info: "55/110",
       },
     ],
     header: ["Small (10-12 People)", "Large (20-24 People)"],
@@ -142,43 +142,43 @@ export const cateringList: CateringInfoListType[] = [
       "Boneless",
       {
         name: "Chicken Francese",
-        info: "75/140",
+        info: "65/120",
       },
       {
         name: "Chicken Piccata",
-        info: "75/140",
+        info: "65/120",
       },
       {
         name: "Chicken Marsala",
-        info: "75/140",
+        info: "65/120",
       },
       {
         name: "Chicken Parmesan",
-        info: "75/140",
+        info: "65/120",
       },
       {
         name: "Chicken Espagna",
-        info: "75/140",
+        info: "65/120",
       },
       {
         name: "Chicken Vesuvio",
-        info: "75/140",
+        info: "65/120",
       },
       {
         name: "Chicken Cacciatore",
-        info: "75/140",
+        info: "65/120",
       },
       {
         name: "Chicken Scarpariello",
-        info: "75/140",
+        info: "65/120",
       },
       {
         name: "Chicken Rosemary",
-        info: "75/140",
+        info: "65/120",
       },
       {
         name: "Stuffed Chicken",
-        info: "75/140",
+        info: "65/120",
         options: [
           {
             option: "w/ Spinach & Mozzarella",
@@ -243,12 +243,14 @@ export const cateringList: CateringInfoListType[] = [
         ],
       },
     ],
+    disclaimer: ["Priced According to Quantities", "Please call in for current pricing"],
   },
   {
     name: "Salad Trays",
     foods: [
       {
         name: "Mixed Field Greens",
+        info: "45",
       },
       {
         name: "Ana’s Salad",
@@ -257,12 +259,15 @@ export const cateringList: CateringInfoListType[] = [
             option: "w/ Dried Cranberries, Nuts, Goat Cheese, Sliced",
           },
         ],
+        info: "60",
       },
       {
         name: "Classic Caesar Salad",
+        info: "45",
       },
       {
         name: "Grilled Chicken Caesar Salad",
+        info: "60",
       },
       {
         name: "Israeli Chopped Salad",
@@ -271,9 +276,7 @@ export const cateringList: CateringInfoListType[] = [
             option: "w/ Tomatoes, Cucumbers and Dill",
           },
         ],
-      },
-      {
-        name: "Greek Salad",
+        info: "60",
       },
       {
         name: "Pasta Salad",
@@ -282,9 +285,10 @@ export const cateringList: CateringInfoListType[] = [
             option: "Choice of: Antonio’s, Rotini, Couscous, Pepper Tricolor",
           },
         ],
+        info: "60",
       },
     ],
-    disclaimer: ["Large Bowl Serves 12-14 People"],
+    header: ["Large Bowl Serves 12-14 People"],
   },
   {
     name: "Starters",
@@ -320,26 +324,29 @@ export const cateringList: CateringInfoListType[] = [
     foods: [
       {
         name: "Stuffed Mushrooms",
+        info: "45/90",
       },
       {
         name: "Vegetable Egg Rolls",
+        info: "45/90",
       },
       {
         name: "Chicken Dumplings",
+        info: "55/110",
       },
       {
         name: "Mozzerella Sticks",
-      },
-      {
-        name: "Mini Quiches",
+        info: "45/90",
       },
       {
         name: "Quesadillas",
+        info: "45/90",
       },
       {
         name: "Half Trays Serve 12",
       },
     ],
+    header: ["Small Trays (10-12 People)", "Large Trays (20-24 People)"],
   },
   {
     name: "Mom's Sides",
@@ -417,7 +424,6 @@ export const cateringList: CateringInfoListType[] = [
         info: "35",
       },
     ],
-    disclaimer: ["Half Trays Serves 12"],
   },
   {
     name: "Pit BBQ & Southern Fried",
@@ -453,6 +459,7 @@ export const cateringList: CateringInfoListType[] = [
         name: "Turkey Meatloaf",
       },
     ],
+    disclaimer: ["Prices vary according to quantity", "Call in for pricing"],
     header: ["Small (10-12 People)", "Large (20-24 People)"],
   },
   {
@@ -492,10 +499,6 @@ export const cateringList: CateringInfoListType[] = [
     name: "Chicken Wings",
     foods: [
       {
-        name: "Half Tray (Approx. 50 Wings)",
-        info: "65/Per Tray",
-      },
-      {
         name: "Buffalo (Hot or Mild)",
       },
       {
@@ -508,6 +511,7 @@ export const cateringList: CateringInfoListType[] = [
         name: "Lemon Pepper",
       },
     ],
+    disclaimer: ["Prices vary according to quantity", "Call in for pricing"],
   },
   {
     name: "Speciality Salads",
@@ -555,19 +559,22 @@ export const cateringList: CateringInfoListType[] = [
         name: "Shrimp Any Style",
       },
     ],
-    disclaimer: ["Priced by the size of the fish", "Serves 8-10 People"],
+    disclaimer: ["Prices vary according to quantity", "Call in for pricing"],
   },
   {
-    name: "Hispanic Platter",
+    name: "Hispanic Bites",
     foods: [
       {
         name: "Empanadas",
+        info: "22/44",
       },
       {
         name: "Bollos de Yuca (Fried Casava Balls)",
+        info: "22/44",
       },
       {
         name: "Quipes de Carne (Lebanese Kibbeh)",
+        info: "22/44",
         options: [
           {
             option: "w/ Ground Beef",
@@ -575,7 +582,8 @@ export const cateringList: CateringInfoListType[] = [
         ],
       },
       {
-        name: "Arepas",
+        name: "Arepas de Yuca",
+        info: "22/44"
       },
     ],
     header: ["Small (10-12 People)", "Large (20-24 People)"],

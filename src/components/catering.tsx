@@ -157,6 +157,7 @@ const Catering = ({
                       name={item.name}
                       foods={item.foods}
                       disclaimer={item.disclaimer}
+                      header={item.header}
                     />
                   </motion.div>
                 );

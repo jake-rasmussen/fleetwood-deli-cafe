@@ -27,7 +27,7 @@ const Menu = ({ menu }: { menu: MenuSectionType[] }) => {
               <MenuSection
                 name={item.name}
                 foods={item.foods}
-                universalOptions={item.universalOptions}
+                extras={item.extras}
               />
             </motion.div>
           );
@@ -44,7 +44,7 @@ const Menu = ({ menu }: { menu: MenuSectionType[] }) => {
               <MenuSection
                 name={item.name}
                 foods={item.foods}
-                universalOptions={item.universalOptions}
+                extras={item.extras}
               />
             </motion.div>
           );

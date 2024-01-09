@@ -1,7 +1,7 @@
 export type MenuSectionType = {
   name: string;
   foods: FoodType[];
-  universalOptions?: FoodType[];
+  extras?: FoodType[];
 };
 
 export type FoodType = {
@@ -24,60 +24,67 @@ export const menu: MenuSectionType[] = [
     foods: [
       {
         food: "Egg on Roll",
-        price: 3.0,
+        price: 3.25,
       },
       {
         food: "Egg, Bacon, Ham or Sausage",
         price: 4.75,
       },
       {
-        food: "Sausage",
-        options: [
-          {
-            option: "Cheese",
-            price: 0.5,
-          },
-          {
-            option: "Egg White",
-            price: 0.75,
-          },
-          {
-            option: "Bagel",
-            price: 0.5,
-          },
-          {
-            option: "Croissant",
-            price: 1.5,
-          },
-          {
-            option: "Extra Egg",
-            price: 0.75,
-          },
-        ],
+        food: "Egg and Cheese Roll",
+        price: 3.75
+      },
+      {
+        food: "Bacon Egg and Cheese Roll",
+        price: 5.25,
+      },
+      {
+        food: "Sausage Egg and Cheese Roll",
+        price: 5.75
+      },
+      {
+        food: "Turkey Bacon Egg Roll",
+        price: 6.50
+      },  
+      {
+        food: "Turkey Bacon Egg and Cheese",
+        price: 6.75
+      },
+      {
+        food: "Breakfast Burrito",
+        price: 6.75,
+        description: "Includes egg, cheese tater tots and avacado",
       },
       {
         food: "Bacon Egg and Cheese Wrap",
-        price: 5.75,
+        price: 6.25,
         description: "2 Eggs, Bacon and Cheese",
       },
       {
-        food: "Two Egg Platter",
-        price: 5.95,
+        food: "Egg Cheese Hero",
+        price: 7.25
+      },
+      {
+        food: "Bacon Egg and Cheese Hero",
+        price: 8.75,
+      },
+      {
+        food: "Egg Homefries Platter",
+        price: 6.75,
         description: "Includes Homefries or Hashbrowns & Toast",
       },
       {
-        food: "Omelette, 1 Item",
-        price: 6.95,
-        description: "Includes Homefries or Hashbrowns & Toast",
+        food: "Egg Bacon Homefries Platter",
+        price: 7.50
       },
       {
         food: "Western Omelette",
-        price: 8.95,
+        price: 9.25,
         description: "Includes Homefries or Hashbrowns & Toast",
       },
       {
-        food: "Egg White Veggie Omelette",
-        price: 9.95,
+        food: "Veggie Omelette",
+        price: 9.25,
         description: "Includes Homefries or Hashbrowns & Toast",
       },
       {
@@ -93,7 +100,7 @@ export const menu: MenuSectionType[] = [
       },
       {
         food: "French Toast",
-        price: 8.49,
+        price: 9.50,
         options: [
           {
             option: "Add Bacon, Sausage or Ham",
@@ -104,10 +111,10 @@ export const menu: MenuSectionType[] = [
       },
       {
         food: "Pancakes",
-        price: 8.49,
+        price: 9.50,
         options: [
           {
-            option: "Add Bacon, Sausage or Ham",
+            option: "Add Bacon, Sausage, Ham or Egg",
             price: 1.75,
           },
         ],
@@ -251,23 +258,13 @@ export const menu: MenuSectionType[] = [
         price: 8.95,
       },
       {
-        food: "El Gringo Wrap",
-        price: 9.99,
-        description: "Chipotle Chicken Salad and Bacon",
-      },
-      {
         food: "The Big Bite",
-        price: 11.95,
+        price: 12.25,
         description: "Corned Beef, Turkey Swiss and Russian Slaw on a Wedge",
       },
       {
-        food: 'Grilled "Puebla" Chicken',
-        price: 11.99,
-        description: "Includes Fried Egg and Cheddar on Wedge",
-      },
-      {
         food: "Italian or American Wedge",
-        price: 11.99,
+        price: 12.25,
       },
       {
         food: "Papo V's Philly Cheese Steak",
@@ -287,6 +284,11 @@ export const menu: MenuSectionType[] = [
         description:
           "Eggplant, Fresh Mozzarella, Roasted Peppers and Balsamic Vinaigrette",
       },
+      {
+        food: "Dominican Chimi",
+        price: 10.25,
+        description: "Groud Beef, Season Cabbage, Tomatoes and Onion on a Roll w/ Ketchup Mayo Sauce",
+      }
     ],
   },
   {
@@ -294,74 +296,218 @@ export const menu: MenuSectionType[] = [
     foods: [
       {
         food: "Ham and Cheese",
-        price: 8.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 8.99,
+          },
+          {
+            option: "Wedge",
+            price: 10.49,
+          },
+        ]
       },
       {
         food: "Grilled Cheese",
-        price: 5.29,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 5.50,
+          },
+          {
+            option: "Wedge",
+            price: 6.99,
+          },
+        ]
       },
       {
         food: "BLT",
-        price: 5.49,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 5.50,
+          },
+          {
+            option: "Wedge",
+            price: 6.99,
+          },
+        ]
       },
       {
         food: "Bologna",
-        price: 7.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 7.99,
+          },
+          {
+            option: "Wedge",
+            price: 9.49,
+          },
+        ]
       },
       {
         food: "Turkey",
-        price: 11.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 8.99
+          },
+          {
+            option: "Wedge",
+            price: 10.49,
+          },
+        ]
       },
       {
         food: "Roast Beef",
-        price: 11.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 10.25
+          },
+          {
+            option: "Wedge",
+            price: 10.49,
+          },
+        ]
       },
       {
         food: "Pastrami",
-        price: 11.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 10.25
+          },
+          {
+            option: "Wedge",
+            price: 11.75,
+          },
+        ]
       },
       {
         food: "Genoa Salami",
-        price: 8.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 8.99
+          },
+          {
+            option: "Wedge",
+            price: 10.49,
+          },
+        ]
       },
       {
         food: "Corned Beef",
-        price: 11.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 10.25
+          },
+          {
+            option: "Wedge",
+            price: 11.75,
+          },
+        ]
       },
       {
         food: "Grilled Chicken",
-        price: 9.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 9.99
+          },
+          {
+            option: "Wedge",
+            price: 11.49,
+          },
+        ]
       },
       {
         food: "Chicken Salad",
-        price: 9.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 9.99
+          },
+          {
+            option: "Wedge",
+            price: 11.49,
+          },
+        ]
       },
       {
         food: "Tuna Salad",
-        price: 9.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 9.99
+          },
+          {
+            option: "Wedge",
+            price: 11.49,
+          },
+        ]
       },
       {
         food: "Egg Salad",
-        price: 8.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 8.99
+          },
+          {
+            option: "Wedge",
+            price: 10.49,
+          },
+        ]
       },
       {
         food: "Chicken Cutlet",
-        price: 9.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 9.99
+          },
+          {
+            option: "Wedge",
+            price: 11.49,
+          },
+        ]
       },
       {
         food: "Eggplant Parmigiana",
-        price: 9.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 9.99
+          },
+          {
+            option: "Wedge",
+            price: 11.49,
+          },
+        ]
       },
       {
         food: "Chicken Cutlet Parmigiana",
-        price: 11.99,
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 9.99
+          },
+          {
+            option: "Wedge",
+            price: 11.49,
+          },
+        ]
       },
       {
         food: "Turkey or Ham and Cheese Croissant",
-        price: 5.99,
+        price: 6.29,
       },
     ],
-    universalOptions: [
+    extras: [
       {
         food: "Cheese",
         price: 0.5,
@@ -402,10 +548,6 @@ export const menu: MenuSectionType[] = [
         food: "Croissant",
         price: 1.5,
       },
-      {
-        food: "Wedge",
-        price: 1.5,
-      },
     ],
   },
   {
@@ -427,11 +569,11 @@ export const menu: MenuSectionType[] = [
         optionsInline: [
           {
             option: "S",
-            price: 5.99,
+            price: 6.25,
           },
           {
             option: "L",
-            price: 6.99,
+            price: 7.25,
           },
         ],
       },
@@ -440,11 +582,11 @@ export const menu: MenuSectionType[] = [
         optionsInline: [
           {
             option: "S",
-            price: 9.74,
+            price: 9.25,
           },
           {
             option: "L",
-            price: 10.74,
+            price: 10.25,
           },
         ],
         description: "Choice of Chicken or Tuna",
@@ -467,11 +609,11 @@ export const menu: MenuSectionType[] = [
         optionsInline: [
           {
             option: "S",
-            price: 7.99,
+            price: 8.50,
           },
           {
             option: "L",
-            price: 8.99,
+            price: 9.50,
           },
         ],
         description:
@@ -539,12 +681,20 @@ export const menu: MenuSectionType[] = [
     name: "Burgers & Sides",
     foods: [
       {
+        food: "Burger Deluxe",
+        price: 13.75,
+      },
+      {
         food: "6oz Fresh Beef Burger",
-        price: 7.99,
+        price: 8.50,
       },
       {
         food: "Fried Egg Beef Burger",
-        price: 8.49,
+        price: 8.25,
+      },
+      {
+        food: "Veggie Burger",
+        price: 7.50,
       },
       {
         food: "Quesadillas",
@@ -554,16 +704,10 @@ export const menu: MenuSectionType[] = [
       {
         food: "Chicken Quesadillas",
         price: 12.99,
-        options: [
-          {
-            option: "Additional Sides",
-            price: 1.5,
-          },
-        ],
       },
       {
         food: "Fries or Knish",
-        price: 4.99,
+        price: 4.25,
       },
       {
         food: "Potato, Macaroni Salad or Coleslaw 1/2 LB",
