@@ -342,9 +342,6 @@ export const cateringList: CateringInfoListType[] = [
         name: "Quesadillas",
         info: "45/90",
       },
-      {
-        name: "Half Trays Serve 12",
-      },
     ],
     header: ["Small Trays (10-12 People)", "Large Trays (20-24 People)"],
   },
