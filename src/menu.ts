@@ -53,7 +53,7 @@ export const menu: MenuSectionType[] = [
       {
         food: "Breakfast Burrito",
         price: 6.75,
-        description: "Includes egg, cheese tater tots and avacado",
+        description: "Includes egg, cheese, tater tots and avacado",
       },
       {
         food: "Bacon Egg and Cheese Wrap",
@@ -96,7 +96,6 @@ export const menu: MenuSectionType[] = [
             price: 1.75,
           },
         ],
-        description: "Made with Challah Bread",
       },
       {
         food: "French Toast",
@@ -368,7 +367,7 @@ export const menu: MenuSectionType[] = [
           },
           {
             option: "Wedge",
-            price: 10.49,
+            price: 11.99,
           },
         ]
       },
@@ -592,7 +591,7 @@ export const menu: MenuSectionType[] = [
         description: "Choice of Chicken or Tuna",
       },
       {
-        food: "Casear",
+        food: "Caesar",
         optionsInline: [
           {
             option: "S",

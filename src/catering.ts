@@ -24,7 +24,7 @@ export const catering: CateringInfoType[] = [
   {
     name: "Continental Breakfast",
     description:
-      "Includes assorted mini bagels, mini danish, mini croissants, and mini muffins. Serevd with cream cheese, butter, orange juice, and coffee.",
+      "Includes assorted mini bagels, mini danish, mini croissants, and mini muffins. Served with cream cheese, butter, orange juice, and coffee.",
     pricing: ["$119.50", "11.95/person", "10 Person Minimum"],
   },
   {
@@ -66,7 +66,7 @@ export const catering: CateringInfoType[] = [
   {
     name: "Italian Hot Lunch",
     description:
-      "Includes your choice of entrée, pasta and salad. Served with bread, cookies and soda",
+      "Includes your choice of entrée, pasta and salad. Served with bread, cookies, and soda",
     pricing: ["$179.50", "17.95/person", "10 Person Minimum"],
   },
 ];

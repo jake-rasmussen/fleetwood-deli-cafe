@@ -12,7 +12,7 @@ const Welcome = () => {
     <section className="flex flex-col items-center justify-center w-full">
       <h2 className="italic py-1 px-6 font-serif font-semibold">
         <AnimatedTextCharacter
-          text={"A Place With Personality"}
+          text={"Your Neighborhood Deli"}
           className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
         />
       </h2>
