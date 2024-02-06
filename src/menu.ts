@@ -253,10 +253,6 @@ export const menu: MenuSectionType[] = [
         description: "Turkey, Swiss, Lettuce, Tomato, Honey Mustard",
       },
       {
-        food: "Grilled Veggie / Hummus wrap",
-        price: 8.95,
-      },
-      {
         food: "The Big Bite",
         price: 12.25,
         description: "Corned Beef, Turkey Swiss and Russian Slaw on a Wedge",
@@ -287,7 +283,59 @@ export const menu: MenuSectionType[] = [
         food: "Dominican Chimi",
         price: 10.25,
         description: "Groud Beef, Season Cabbage, Tomatoes and Onion on a Roll w/ Ketchup Mayo Sauce",
-      }
+      },
+      {
+        food: "Mount Vernon Delight",
+        description: "Ovengold Turkey, Muenster Cheese, Tomato, Avocado, Mayo",
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 10.50
+          },
+          {
+            option: "Wedge",
+            price: 11.99,
+          },
+        ]
+      },
+      {
+        food: "The Fleetwood",
+        description: "Grilled Chicken, Sautéed Mushrooms/Onions, Swiss Cheese, Caesar Dressing",
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 10.50
+          },
+          {
+            option: "Wedge",
+            price: 11.99,
+          },
+        ]
+      },
+      {
+        food: "The Mexican Dream",
+        description: "Roast Beef, Onions, Peppers, Jalapeños and Pepper Jack Cheese",
+        optionsInline: [
+          {
+            option: "Wedge",
+            price: 12.99,
+          },
+        ]
+      },
+      {
+        food: "Turkey Club/Chicken",
+        description: "Turkey, Bacon, Tomato, Lettuce",
+        optionsInline: [
+          {
+            option: "Roll",
+            price: 10.49
+          },
+          {
+            option: "Wedge",
+            price: 11.99,
+          },
+        ]
+      },
     ],
   },
   {

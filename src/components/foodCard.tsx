@@ -14,9 +14,9 @@ const FoodCard = (props: FoodType) => {
         </span>
         {optionsInline?.map((option, index: number) => {
           return (
-            <div key={`optionInline${index}`}>
+            <div className="text-xs md:text-lg" key={`optionInline${index}`}>
               {option.option}
-              <span className="mx-2 font-black font-sans text-xs text-deepred">
+              <span className="mx-2 font-black font-sans text-deepred">
                 {option.price?.toFixed(2)}
               </span>
             </div>
